@@ -1,0 +1,149 @@
+/* Reset default styles and set global font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Center the form on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* Main form container styling */
+.form-container {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Heading styles */
+h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Subtitle paragraph styles */
+.form-container p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Google button styling */
+.google-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.google-button:hover {
+    background: #f5f5f5;
+}
+
+.google-button i {
+    font-size: 18px;
+    /* Adjust size */
+    margin-right: 8px;
+    /* Space between icon and text */
+}
+
+/* Input group styling */
+.input-group {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #00C9A7;
+    box-shadow: 0 0 0 2px rgba(0, 201, 167, 0.1);
+}
+
+/* Forgot password link */
+.forgot-link {
+    display: block;
+    text-align: right;
+    color: #00C9A7;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Sign in button styling */
+.sign-in-button {
+    width: 100%;
+    padding: 12px;
+    background: #00C9A7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 24px 0;
+    transition: background-color 0.2s ease;
+}
+
+.sign-in-button:hover {
+    background: #00b396;
+}
+
+/* Sign up text and link styling */
+.signup-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.signup-link {
+    color: #00C9A7;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
