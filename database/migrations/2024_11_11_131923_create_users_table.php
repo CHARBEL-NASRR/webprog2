@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('phone'); 
+            $table->string('phone')->nullable(); 
+            $table->string('google_id')->nullable();
             $table->string('validate_token')->nullable();
             $table->timestamp('expired_date')->nullable();
             $table->boolean('is_valid')->default(0);

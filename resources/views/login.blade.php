@@ -15,11 +15,24 @@
         <p>Glad to see you again</p>
         <p>Login to your account below.</p>
         
-        <button class="google-button">
+        @if (session('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('error') }}
+            </div>
+        @endif
+
+        <a href="{{ route('login.google') }}" class="google-button">
             <i class="fab fa-google"></i> Continue with Gmail
-        </button>
+        </a>
         
-        <form action="#" method="POST">
+        <form action="{{ route('login.submit') }}" method="POST">
+            @csrf
             <div class="input-group">
                 <label for="email">Email</label>
                 <input 
@@ -40,7 +53,7 @@
                     placeholder="Enter your password"
                     required
                 >
-                <a href="#" class="forgot-link">Forgot password?</a>
+                <a href="{{ route('forgetpassword.form') }}" class="forgot-link">Forgot password?</a>
             </div>
 
             <button type="submit" class="sign-in-button">Sign In</button>
