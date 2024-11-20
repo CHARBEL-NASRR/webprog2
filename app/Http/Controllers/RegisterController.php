@@ -17,7 +17,8 @@ class RegisterController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'first_name' => 'required|string|max:255', 
-            'last_name' => 'required|string|max:255', 
+            'last_name' => 'required|string|max:255',
+            'phone' => 'required|string|max:255', 
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|confirmed|min:6',
         ]);
@@ -31,9 +32,9 @@ class RegisterController extends Controller
         $user = new User([
             'first_name' => $request->input('first_name'),
             'last_name' => $request->input('last_name'),
+            'phone_number' => $request->input('phone'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
-            'phone' => $request->input('phone'),
             'google_id' => null,
             'validate_token' => $this->gen_uuid(), 
             'is_valid' => false,

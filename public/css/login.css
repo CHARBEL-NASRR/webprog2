@@ -57,7 +57,7 @@ h2 {
 }
 
 .google-button:hover {
-    background: #f5f5f5;
+    background: #0bc2a2;
 }
 
 .google-button i {
@@ -98,7 +98,7 @@ h2 {
 .forgot-link {
     display: block;
     text-align: right;
-    color: #00C9A7;
+    color: #0bc2a2;
     text-decoration: none;
     font-size: 14px;
     margin-top: 8px;
@@ -112,7 +112,7 @@ h2 {
 .sign-in-button {
     width: 100%;
     padding: 12px;
-    background: #00C9A7;
+    background: #0bc2a2;
     color: white;
     border: none;
     border-radius: 4px;
@@ -133,7 +133,7 @@ h2 {
 }
 
 .signup-link {
-    color: #00C9A7;
+    color: #0bc2a2;
     text-decoration: none;
 }
 

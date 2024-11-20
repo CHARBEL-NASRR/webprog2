@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('oauth_personal_access_clients', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->uuid('client_id');
-            $table->timestamps();
+        Schema::create('Images', function (Blueprint $table) {
+            $table->id('image_id');  // Custom primary key
+            $table->unsignedBigInteger('spot_id');
+            $table->string('image_url');
+
+            $table->foreign('spot_id')->references('spot_id')->on('Parking_Spots')->onDelete('cascade');
         });
     }
 
@@ -23,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('oauth_personal_access_clients');
+        Schema::dropIfExists('images');
     }
 };

@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
+        Schema::create('Users', function (Blueprint $table) {
+            $table->id('user_id');  // Custom primary key
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('phone_number');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('phone')->nullable(); 
+            $table->string('status')->nullable();
             $table->string('google_id')->nullable();
             $table->string('validate_token')->nullable();
-            $table->timestamp('expired_date')->nullable();
             $table->boolean('is_valid')->default(0);
-            $table->tinyInteger('role')->default(1); 
+            $table->timestamp('expired_date')->nullable();
             $table->timestamps();
         });
     }

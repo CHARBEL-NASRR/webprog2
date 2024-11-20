@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
+    <script>
+        // Function to display alert on successful submission
+        function resetAlert() {
+            alert("Kindly Check Your Email for Validation");
+        }
+
+        // Adding event listener to the form
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("signup-form");
+
+            form.addEventListener("submit", function(event) {
+                // Prevent form submission for demo (You can remove this for real use)
+                event.preventDefault();
+                // Trigger the alert here when the form is submitted
+                resetAlert();
+
+                // If you were handling it server-side, you'd remove this:
+                // form.submit();  // Uncomment to actually submit the form
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="signup-container">

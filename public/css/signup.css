@@ -92,7 +92,7 @@ h1 {
 .signup-btn {
     flex: 1;
     padding: 12px;
-    background: #00C9A7;
+    background: #0bc2a2;
     color: white;
     border: none;
     border-radius: 4px;
@@ -112,7 +112,7 @@ h1 {
 }
 
 .login-link a {
-    color: #00C9A7;
+    color: #0bc2a2;
     text-decoration: none;
 }
 
